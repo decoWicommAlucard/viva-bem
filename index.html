@@ -1,22 +1,41 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Viva Bem</title>
-    <link rel="stylesheet" href="./style.css" />
+    <!-- Google Fonts (Inter e Roboto) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header>
-      <figure>
-        <img src="./src/img/logo-desktop.png" alt="Viva Bem Logo" />
-        <img src="./src/img/logo-mobile.png" alt="Viva Bem Logo" />
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <figure class="site-header__logo">
+        <img
+          class="site-header__logo-image"
+          src="./src/img/logo-desktop.png"
+          alt="Viva Bem Logo"
+        />
       </figure>
 
-      <nav>
-        <ul>
-          <li><a href="#prevent-men">Prevenção Mas</a></li>
-          <li><a href="#prevent-women">Prevenção Fem</a></li>
+      <nav class="site-header__nav" aria-label="Navegação principal">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#prevent-men"
+              >Prevenção Mas</a
+            >
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#prevent-women"
+              >Prevenção Fem</a
+            >
+          </li>
         </ul>
       </nav>
     </header>

@@ -66,6 +66,13 @@ p {
 html {
   font-size: 100%;
 } /* 16px */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 body {
   font-family: var(--font-main); /* Inter como fonte padrão */
   font-weight: 400; /* 400 */
@@ -135,6 +142,12 @@ button {
   font: inherit;
 }
 
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
 /* ===== Flex util genérico com presets ===== */
 /* Presets aceitos:
    - between-center, center, around-center, evenly-center,
@@ -142,5 +155,131 @@ button {
    Ex.: @include xflex(between-center, $gap: 16px);
 */
 /* Item util: controla o item dentro do container flex */
+.site-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.site-header > * {
+  min-width: 0;
+}
+.site-header {
+  width: min(100%, 1117px);
+  margin: 0 auto;
+  min-height: 57px;
+  position: fixed;
+  top: 63px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 11px;
+  padding-right: 28px;
+  color: #FFFFFF;
+  background: linear-gradient(90deg, #4247A2 0%, #52B095 100%);
+  border-radius: 3.125rem;
+}
+.site-header__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.site-header__logo > * {
+  min-width: 0;
+}
+.site-header__logo-image {
+  min-height: 45px;
+}
+.site-header__nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.site-header__nav-list > * {
+  min-width: 0;
+}
+.site-header__nav-list {
+  list-style: none;
+}
+.site-header__nav-link {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05em;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+.site-header__nav-link:focus-visible, .site-header__nav-link:hover {
+  opacity: 0.75;
+}
+@media (max-width: 1023.98px) {
+  .site-header {
+    top: 22px;
+    min-height: 48px;
+    left: 19px;
+    right: 30px;
+    width: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .site-header > * {
+    min-width: 0;
+  }
+  .site-header__logo-image {
+    max-width: 87px;
+    min-height: 21px;
+  }
+  .site-header__nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .site-header__nav-list > * {
+    min-width: 0;
+  }
+  .site-header__nav-link {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 1023.98px) and (max-width: 425px) {
+  .site-header {
+    top: 28px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 12px;
+    justify-content: center;
+  }
+  .site-header__nav-list {
+    gap: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .site-header {
+    padding-left: 57px;
+  }
+  .site-header__nav-list {
+    margin-right: 212px;
+  }
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base/_reset.scss%22,%22../scss/base/_base.scss%22,%22../scss/base/_tokens.scss%22,%22../scss/base/_utils.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAA;AAAA;AAAA;EAGE;;;AAEF;EACE;EACA;;;AAEF;EACE;EACA;;;AAEF;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;AAAA;EAIE;;;AAEF;EACE;EACA;;;AAEF;AAAA;EAEE;EACA;EACA;;;AAEF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AChDF;EACE;;;AAGF;AACA;EACE;EACA;AAEF;EACE;EACA,aCYa,KDZsB;EACnC,aCkBU,KDlBsB;EAChC;EACA;;;AAGF;AACA;EACE,WCPY,UDOoB;EAChC,aCWW,KDXsB;;;AAGnC;AACA;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;;;AAGF;EACE,WCrBa;EDsBb,aCNS;EDOT,aCVU;;;ADYZ;EACE,WCzBa;ED0Bb,aCXS;EDYT,aCfU;;;ADiBZ;EACE,WC7Ba;ED8Bb,aChBS;EDiBT,aCrBc;;;ADwBhB;AACA;EACE;EACA;;;AAGF;EACE;;;AAGF;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;;;AAGF;AACA;AAAA;AAAA;AAAA;EAIE;;;AEzEF;AACA;AAAA;AAAA;AAAA;AAAA;AAgEA%22,%22file%22:%22styles.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base/_reset.scss%22,%22../scss/base/_base.scss%22,%22../scss/base/_tokens.scss%22,%22../scss/base/_utils.scss%22,%22../scss/layout/_header.scss%22,%22../scss/base/_mixins.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAA;AAAA;AAAA;EAGE;;;AAEF;EACE;EACA;;;AAEF;EACE;EACA;;;AAEF;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;AAAA;EAIE;;;AAEF;EACE;EACA;;;AAEF;AAAA;EAEE;EACA;EACA;;;AAEF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AChDF;EACE;;;AAGF;AACA;EACE;EACA;AAEF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA,aCKa,KDLsB;EACnC,aCWU,KDXsB;EAChC;EACA;;;AAGF;AACA;EACE,WCdY,UDcoB;EAChC,aCIW,KDJsB;;;AAGnC;AACA;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;;;AAGF;EACE,WC5Ba;ED6Bb,aCbS;EDcT,aCjBU;;;ADmBZ;EACE,WChCa;EDiCb,aClBS;EDmBT,aCtBU;;;ADwBZ;EACE,WCpCa;EDqCb,aCvBS;EDwBT,aC5Bc;;;AD+BhB;AACA;EACE;EACA;;;AAGF;EACE;;;AAGF;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;;;AAGF;AACA;AAAA;AAAA;AAAA;EAIE;;;AAGF;EACE;EACA;EACA;;;AEtFF;AACA;AAAA;AAAA;AAAA;AAAA;AAgEA;AC/DA;EDmDE;EACA,gBAlCM;EAmCN,aA3BU;EA4BV,iBA7BY;EA8BZ,KCtD2C;EDuD3C,WAnCO;EAoCP;;AACA;EACE;;AC3DJ;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EAEA;EACA;EACA,OFRkB;EESlB,YFVS;EEWT,eF2Bc;;AEzBd;EDmCA;EACA,gBAlCM;EAmCN,aAlCQ;EAmCR,iBAlCU;EAmCV,KCtC6B;EDuC7B,WAnCO;EAoCP;;AACA;EACE;;ACvCF;EACE;;AAGF;ED2BA;EACA,gBAlCM;EAmCN,aAlCQ;EAmCR,iBAlCU;EAmCV,KC9B6B;ED+B7B,WAnCO;EAoCP;;AACA;EACE;;ACnCF;EAEE;;AAGF;EACE,WFfe;EEgBf,aFVW;EEWX;EACA;EACA;EACA;;AAEA;EAEE;;AC3BJ;EDZF;IA4CI;IACA;IACA;IACA;IACA;IACA;IDEF;IACA,gBAlCM;IAmCN,aA3BU;IA4BV,iBA7BY;IA8BZ,KCL6C;IDM7C,WAnCO;IAoCP;;EACA;IACE;;ECPA;IACE;IACA;;EAGF;IDNF;IACA,gBAlCM;IAmCN,aAlCQ;IAmCR,iBAlCU;IAmCV,KCG+B;IDF/B,WAnCO;IAoCP;;EACA;IACE;;ECEA;IACE,WFpDQ;;;AEuDV;EAjEJ;IAkEM;IACA;IACA;IACA;IACA;;EAEA;IACE;;;AAKN;EA9EF;IA+EI;;EACA;IACE%22,%22file%22:%22styles.css%22%7D */
