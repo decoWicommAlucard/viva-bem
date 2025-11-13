@@ -1,0 +1,33 @@
+@use 'tokens';
+
+// ----------------- Containers -----------------
+
+@mixin container {
+  width: min(92vw, #{tokens.$container-max});
+  margin-inline: auto;
+}
+@mixin container-max($max) {  
+  width: min(92vw, #{$max});
+  margin-inline: auto;
+}
+
+// ----------------- Breakpoints -----------------
+// Mobile: < 1024px
+@mixin mobile {
+  @media (max-width: 1023.98px) { @content; }
+}
+
+// Tablet: 768px–1023.98px
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1023.98px) { @content; }
+}
+
+// Desktop: >= 1024px
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+
+// Intervalo customizado (quando precisar de algo fora do padrão)
+@mixin between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) { @content; }
+}

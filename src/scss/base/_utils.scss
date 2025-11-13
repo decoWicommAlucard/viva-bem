@@ -1,0 +1,72 @@
+@use 'tokens';
+
+/* ===== Flex util genérico com presets ===== */
+/* Presets aceitos:
+   - between-center, center, around-center, evenly-center,
+   - start-center, end-center, between-start, column-center
+   Ex.: @include xflex(between-center, $gap: 16px);
+*/
+@mixin xflex(
+  $preset: null,
+  // preset opcional
+  $dir: null,
+  // row | column
+  $align: null,
+  // align-items
+  $justify: null,
+  // justify-content
+  $gap: 0,
+  // espaçamento entre itens
+  $wrap: null // wrap | nowrap
+) {
+  // defaults
+  $dir: if($dir != null, $dir, row);
+  $align: if($align != null, $align, center);
+  $justify: if($justify != null, $justify, flex-start);
+  $wrap: if($wrap != null, $wrap, nowrap);
+
+  // presets (sobrescrevem quando usados)
+  @if $preset == between-center {
+    $justify: space-between;
+    $align: center;
+  } @else if $preset == center {
+    $justify: center;
+    $align: center;
+  } @else if $preset == around-center {
+    $justify: space-around;
+    $align: center;
+  } @else if $preset == evenly-center {
+    $justify: space-evenly;
+    $align: center;
+  } @else if $preset == start-center {
+    $justify: flex-start;
+    $align: center;
+  } @else if $preset == end-center {
+    $justify: flex-end;
+    $align: center;
+  } @else if $preset == between-start {
+    $justify: space-between;
+    $align: flex-start;
+  } @else if $preset == column-center {
+    $dir: column;
+    $justify: center;
+    $align: center;
+  }
+
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+  flex-wrap: $wrap;
+  min-width: 0; // evita overflow de conteúdo longo
+  > * {
+    min-width: 0;
+  } // e dos filhos
+}
+
+/* Item util: controla o item dentro do container flex */
+@mixin flex-item($grow: 0, $shrink: 1, $basis: auto) {
+  flex: $grow $shrink $basis;
+  min-width: 0;
+}
