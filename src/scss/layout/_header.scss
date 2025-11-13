@@ -52,6 +52,7 @@
     right: 30px;
     width: auto;
     margin: 0;
+    transform: none;
     @include utils.xflex(between-center, $gap: 18px, $wrap: wrap);
 
     &__logo-image {
