@@ -10,8 +10,6 @@ html {
 } /* 16px */
 
 body {
-  background: tokens.$color-bg-app; /* ex: #fff */
-  color: tokens.$color-text-strong; /* títulos/texto principal */
   font-family: var(--font-main); /* Inter como fonte padrão */
   font-weight: tokens.$font-regular; /* 400 */
   line-height: tokens.$lh-normal; /* 1.4 */
@@ -80,4 +78,3 @@ button {
   font: inherit;
   color: tokens.$color-text-strong;
 }
-
