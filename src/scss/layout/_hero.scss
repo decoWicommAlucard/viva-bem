@@ -1,0 +1,163 @@
+﻿@use '../base/tokens' as tokens;
+@use '../base/utils' as utils;
+@use '../base/mixins' as mixins;
+
+.hero {
+  width: 100%;
+  border-radius: tokens.$radius-xl;
+  position: relative;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  &__content {
+    max-width: 30rem;
+    @include utils.xflex($dir: column, $gap: 1.5rem);
+  }
+
+  &__eyebrow {
+    font-size: 0.875rem;
+    font-weight: tokens.$font-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    background: tokens.$gradient-title;
+  }
+
+  &__title {
+    font-size: tokens.$font-size-h2;
+    line-height: 1.2;
+    font-weight: tokens.$font-bold;
+    background: linear-gradient(90deg, #1173d4 0%, #33cc73 100%);
+
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: tokens.$lh-relaxed;
+    color: rgba(4, 3, 28, 0.7);
+  }
+
+  &__actions {
+    @include utils.xflex($gap: 1rem, $wrap: wrap);
+    width: 100%;
+  }
+
+  &__button {
+    @include utils.xflex($align: center, $justify: center);
+    width: 100%;
+    height: tokens.$btn-height;
+    font-weight: tokens.$font-medium;
+    border-radius: tokens.$radius-base;
+    border: 1px solid transparent;
+    font-size: tokens.$font-size-paragraph-hero;
+
+    &--primary {
+      background: tokens.$gradient-button;
+      color: #ffffff;
+    }
+
+    &--ghost {
+      border: 1px solid tokens.$color-secondary;
+      color: tokens.$color-secondary;
+      background: #f9fafb;
+      max-width: 162px;
+    }
+  }
+
+  @include mixins.desktop {
+    background-image: url('../img/banner-hero.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+
+    min-height: 573px;
+
+    &__content {
+      margin: 0 auto;
+      @include mixins.container-max(1117px);
+      align-items: flex-start;
+      max-width: none;
+      margin-top: 206px;
+    }
+
+    &__title {
+      max-width: 565px;
+    }
+
+    &__button {
+      max-width: 257px;
+      &--ghost {
+        max-width: 162px;
+      }
+    }
+  }
+
+  @include mixins.mobile {
+    width: min(100%, 720px);
+    margin: 134px auto 0;
+    padding-inline: 16px;
+    @include utils.xflex(
+      $dir: column,
+
+      $align: center,
+      $justify: center
+    );
+
+    &__content {
+      align-items: flex-start;
+      gap: 0;
+      @include utils.xflex($gap: 0, $dir: column, $align: flex-start);
+    }
+
+    &__actions {
+      width: 100%;
+      @include utils.xflex(
+        $gap: 16px,
+        $dir: row,
+        $align: center,
+        $justify: center
+      );
+    }
+
+    &__button {
+      width: min(100%, 257px);
+      justify-content: center;
+
+      &--primary {
+        max-width: 162px;
+      }
+      &--ghost {
+        max-width: 107px;
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+    &__description {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 767.98px) {
+      width: 100%;
+
+      &__content {
+        align-items: center;
+        text-align: center;
+      }
+
+      &__actions {
+        @include utils.xflex(
+          $align: center,
+          $justify: center,
+          $wrap: wrap,
+          $gap: 12px
+        );
+      }
+    }
+  }
+}

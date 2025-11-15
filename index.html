@@ -1,15 +1,65 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sass básico</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Viva Bem</title>
+    <!-- Google Fonts (Inter e Roboto) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <h1>Olá, Sass!!! </h1>
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <figure class="site-header__logo">
+        <img
+          class="site-header__logo-image"
+          src="./src/img/logo-desktop.png"
+          alt="Viva Bem Logo"
+        />
+      </figure>
 
-    <p>Este HTML usa o CSS gerado a partir de <code>style.scss</code>.</p>
-    <button class="btn">Botão</button>
+      <nav class="site-header__nav" aria-label="Navegação principal">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#prevent-men"
+              >Prevenção Mas</a
+            >
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#prevent-women"
+              >Prevenção Fem</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== HERO ========== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 class="hero__title" id="hero-title">
+            Cuidar da saúde é um ato de amor
+          </h1>
+          <p class="hero__description">
+            Confira os principais exames de prevenção por faixa etária.
+          </p>
+          <div class="hero__actions">
+            <a class="hero__button hero__button--primary" href="#agenda">
+              Ver agenda por idade
+            </a>
+            <a class="hero__button hero__button--ghost" href="#about">
+              Saiba mais
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
