@@ -98,6 +98,7 @@
     width: min(100%, 720px);
     margin: 134px auto 0;
     padding-inline: 16px;
+    padding-bottom: 52px;
     @include utils.xflex(
       $dir: column,
 
