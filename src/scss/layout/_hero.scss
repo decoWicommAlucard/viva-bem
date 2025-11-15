@@ -7,6 +7,8 @@
   border-radius: tokens.$radius-xl;
   position: relative;
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 
   &__content {
     max-width: 30rem;
