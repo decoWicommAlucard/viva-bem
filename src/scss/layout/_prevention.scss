@@ -16,13 +16,16 @@
   &__title {
     font-size: tokens.$font-size-h2;
     text-align: center;
-    color: #d857aa;
     font-weight: tokens.$font-bold;
+
+    // texto com gradiente rosa (default)
+    background-image: tokens.$gradient-pink;
+    background-clip: text;
+    color: transparent;
   }
 
   &__cards {
     width: 100%;
-
     @include utils.xflex($wrap: wrap, $justify: center, $align: stretch);
     column-gap: 42px;
     row-gap: 67px;
@@ -45,12 +48,10 @@
   }
 
   &__image {
-    width: 88px;
-    height: 88px;
+    width: 105px;
+    height: 105px;
     border-radius: tokens.$radius-full;
     object-fit: cover;
-    border: 5px solid #ffffff;
-    box-shadow: 0 12px 30px rgba(17, 115, 212, 0.15);
   }
 
   &__card-title {
@@ -66,7 +67,6 @@
     list-style-position: inside;
     display: flex;
     flex-direction: column;
-    gap: 6px;
   }
 
   &__list-item {
@@ -74,6 +74,18 @@
     font-family: tokens.$font-roboto;
     line-height: tokens.$lh-relaxed;
     color: rgba(tokens.$brand-dark, 0.8);
+  }
+
+  // variação masculina
+  &--male {
+    background: #ffffff;
+
+    .prevention__title {
+      background-image: tokens.$gradient-blue;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   @include mixins.mobile {
