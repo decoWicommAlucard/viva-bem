@@ -7,11 +7,7 @@
   width: min(100%, 1117px);
   margin: 0 auto;
   min-height: 57px;
-  position: fixed;
-  z-index: 10;
-  top: 63px;
-  left: 50%;
-  transform: translateX(-50%);
+  transform: translate(0%, 63px); // MUHAHAHAHAHAHAHHAHAHAHHAHAHAHAHAHHAHAHA
 
   padding-left: 11px;
   padding-right: 28px;
@@ -47,12 +43,11 @@
   }
 
   @include mixins.mobile {
-    top: 22px;
+    margin: 0 16px;
+    margin-top: 18px;
     min-height: 48px;
-    left: 19px;
-    right: 30px;
+
     width: auto;
-    margin: 0;
     transform: none;
     @include utils.xflex(between-center, $gap: 18px, $wrap: wrap);
 
