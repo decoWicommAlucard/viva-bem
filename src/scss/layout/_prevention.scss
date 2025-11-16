@@ -1,0 +1,103 @@
+@use '../base/tokens' as tokens;
+@use '../base/utils' as utils;
+@use '../base/mixins' as mixins;
+
+.prevention {
+  width: 100%;
+  background: #fdefef;
+  padding-top: 51px;
+  padding-bottom: 69px;
+
+  &__container {
+    @include mixins.container-max(1117px);
+    @include utils.xflex($dir: column, $align: center, $gap: 54px);
+  }
+
+  &__title {
+    font-size: tokens.$font-size-h2;
+    text-align: center;
+    font-weight: tokens.$font-bold;
+
+    // texto com gradiente rosa (default)
+    background-image: tokens.$gradient-pink;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__cards {
+    width: 100%;
+    @include utils.xflex($wrap: wrap, $justify: center, $align: stretch);
+    column-gap: 42px;
+    row-gap: 67px;
+  }
+
+  &__card {
+    @include utils.flex-item(1, 1, min(100%, 300px));
+    max-width: min(100%, 250px);
+    @include utils.xflex($dir: column, $align: center, $gap: 1rem);
+    padding: 0 8px;
+    padding-top: 18px;
+
+    border-radius: tokens.$radius-xl;
+    border-radius: 20px;
+
+    background: #fffcfc;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
+    min-height: 400px;
+  }
+
+  &__image {
+    width: 105px;
+    height: 105px;
+    border-radius: tokens.$radius-full;
+    object-fit: cover;
+  }
+
+  &__card-title {
+    font-size: tokens.$font-size-h3;
+    font-weight: tokens.$font-semibold;
+    color: tokens.$brand-dark;
+  }
+
+  &__list {
+    width: 100%;
+    text-align: left;
+    list-style: disc;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-item {
+    font-size: tokens.$font-size-p;
+    font-family: tokens.$font-roboto;
+    line-height: tokens.$lh-relaxed;
+    color: rgba(tokens.$brand-dark, 0.8);
+  }
+
+  // variação masculina
+  &--male {
+    background: #f8f9fa;
+
+    .prevention__title {
+      background-image: tokens.$gradient-blue;
+      background-clip: text;
+      color: transparent;
+      font-size: 32px;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @include mixins.mobile {
+    padding-inline: 24px;
+   
+    &__title {
+      font-size: 32px;
+    }
+
+    &__cards {
+      gap: 28px;
+    }
+  }
+}

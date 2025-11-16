@@ -10,11 +10,28 @@ $gradient-button: linear-gradient(0deg, #1173d4 0%, #1173d4 100%),
   linear-gradient(90deg, rgba(17, 115, 212, 0) 100%, #1173d4 0%);
 
 $gradient-title: linear-gradient(90deg, #33cc73 0%, #1173d4 100%);
+$gradient-pink: linear-gradient(
+  90deg,
+  #f9016f8a 54%,
+  #9308859e 61.96%,
+  #d038aac0 75.48%,
+  #851c87 100%
+);
+$gradient-blue: linear-gradient(
+  90deg,
+  #3373d2 0%,
+  #6f95c7 25%,
+  #7bb5f5 50%,
+  #0074ee 75%,
+  #5ea7ef 100%
+);
+$gradient-alerts-title: linear-gradient(90deg, #1173d4 0%, #33cc73 100%);
 
 $color-text-header: #ffffff; // cor do texto no header
 
 // -------------------- TIPOGRAFIA --------------------
 $font-inter: 'Inter', sans-serif; // família para h3, h4, h5
+$font-roboto: 'Roboto', sans-serif; // família para h1, h2, p, span
 
 // Tamanhos (px → rem; base 16px)
 $font-size-p: 0.875rem; // 14px
@@ -22,6 +39,8 @@ $font-size-h1: 1.5625rem; // 25px
 $font-size-h2: 2.8125rem; // 45px
 $font-size-h3: 1.25rem; // 20px
 
+$font-size-title-prevent-mobile: 2.1875rem; // 35px
+$font-size-title-importance: 1.5rem; // 24px
 $font-size-header: 1.25rem; // 20px
 $font-size-card-important: 1.125rem; // 18px
 $font-size-footer: 1.125rem; // 18px

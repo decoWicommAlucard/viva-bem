@@ -5,10 +5,11 @@
 .hero {
   width: 100%;
   border-radius: tokens.$radius-xl;
-  position: relative;
+
   overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
+  margin-top: -63px;
 
   &__content {
     max-width: 30rem;
@@ -96,8 +97,9 @@
 
   @include mixins.mobile {
     width: min(100%, 720px);
-    margin: 134px auto 0;
+    margin: 64px auto 0;
     padding-inline: 16px;
+    padding-bottom: 52px;
     @include utils.xflex(
       $dir: column,
 
