@@ -666,12 +666,13 @@ ul {
   color: rgba(4, 3, 28, 0.8);
 }
 .prevention--male {
-  background: #ffffff;
+  background: #f8f9fa;
 }
 .prevention--male .prevention__title {
   background-image: linear-gradient(90deg, #3373d2 0%, #6f95c7 25%, #7bb5f5 50%, #0074ee 75%, #5ea7ef 100%);
   background-clip: text;
   color: transparent;
+  font-size: 32px;
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1023.98px) {
@@ -679,11 +680,154 @@ ul {
     padding-inline: 24px;
   }
   .prevention__title {
-    font-size: 2.1875rem;
+    font-size: 32px;
   }
   .prevention__cards {
     gap: 28px;
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base/_reset.scss%22,%22../scss/base/_base.scss%22,%22../scss/base/_tokens.scss%22,%22../scss/base/_utils.scss%22,%22../scss/layout/_header.scss%22,%22../scss/base/_mixins.scss%22,%22../scss/layout/_hero.scss%22,%22../scss/layout/_importance.scss%22,%22../scss/layout/_prevention.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%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%22,%22file%22:%22styles.css%22%7D */
+.alerts {
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 0 81px;
+}
+.alerts__container {
+  width: min(92vw, 931px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 61px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.alerts__container > * {
+  min-width: 0;
+}
+.alerts__title {
+  font-size: clamp(2.25rem, 3vw, 2.8125rem);
+  font-weight: 700;
+  text-align: center;
+  background-image: linear-gradient(90deg, #1173d4 0%, #33cc73 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.alerts__cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+.alerts__cards > * {
+  min-width: 0;
+}
+.alerts__cards {
+  row-gap: 25px;
+}
+.alerts__card {
+  max-width: 416px;
+  padding: 14px 24px 20px 24px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.65rem;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.alerts__card > * {
+  min-width: 0;
+}
+.alerts__card {
+  box-shadow: 0 14px 34px rgba(17, 20, 45, 0.08);
+  text-align: left;
+}
+.alerts__card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.alerts__card-header > * {
+  min-width: 0;
+}
+.alerts__card-header {
+  font-weight: 600;
+}
+.alerts__icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.alerts__card-title {
+  font-size: 1.125rem;
+}
+.alerts__card-text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(4, 3, 28, 0.85);
+}
+.alerts__card--pink {
+  background: #f9d6e7;
+}
+.alerts__card--pink .alerts__card-title {
+  color: #ad346a;
+}
+.alerts__card--pink .alerts__card-text {
+  color: #ad346a;
+}
+.alerts__card--blue {
+  background: #d4e7fb;
+}
+.alerts__card--blue .alerts__card-title {
+  color: #2769a3;
+}
+.alerts__card--blue .alerts__card-text {
+  color: #2769a3;
+}
+.alerts__card--green {
+  background: #d8f1df;
+}
+.alerts__card--green .alerts__card-title {
+  color: #244a2d;
+}
+.alerts__card--green .alerts__card-text {
+  color: #244a2d;
+}
+.alerts__card--yellow {
+  background: #fde4bc;
+}
+.alerts__card--yellow .alerts__card-title {
+  color: #976c00;
+}
+.alerts__card--yellow .alerts__card-text {
+  color: #976c00;
+}
+@media (max-width: 1023.98px) {
+  .alerts {
+    padding: 26px 18px;
+  }
+  .alerts__container {
+    gap: 32px;
+  }
+  .alerts__title {
+    font-size: 1.5rem;
+  }
+  .alerts__card {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base/_reset.scss%22,%22../scss/base/_base.scss%22,%22../scss/base/_tokens.scss%22,%22../scss/base/_utils.scss%22,%22../scss/layout/_header.scss%22,%22../scss/base/_mixins.scss%22,%22../scss/layout/_hero.scss%22,%22../scss/layout/_importance.scss%22,%22../scss/layout/_prevention.scss%22,%22../scss/layout/_alerts.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%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%22,%22file%22:%22styles.css%22%7D */

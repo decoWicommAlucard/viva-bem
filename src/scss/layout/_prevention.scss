@@ -78,21 +78,22 @@
 
   // variação masculina
   &--male {
-    background: #ffffff;
+    background: #f8f9fa;
 
     .prevention__title {
       background-image: tokens.$gradient-blue;
       background-clip: text;
       color: transparent;
+      font-size: 32px;
       -webkit-text-fill-color: transparent;
     }
   }
 
   @include mixins.mobile {
     padding-inline: 24px;
-
+   
     &__title {
-      font-size: tokens.$font-size-title-prevent-mobile;
+      font-size: 32px;
     }
 
     &__cards {
