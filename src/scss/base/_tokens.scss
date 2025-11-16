@@ -15,6 +15,7 @@ $color-text-header: #ffffff; // cor do texto no header
 
 // -------------------- TIPOGRAFIA --------------------
 $font-inter: 'Inter', sans-serif; // família para h3, h4, h5
+$font-roboto: 'Roboto', sans-serif; // família para h1, h2, p, span
 
 // Tamanhos (px → rem; base 16px)
 $font-size-p: 0.875rem; // 14px
@@ -22,6 +23,7 @@ $font-size-h1: 1.5625rem; // 25px
 $font-size-h2: 2.8125rem; // 45px
 $font-size-h3: 1.25rem; // 20px
 
+$font-size-title-prevent-mobile: 2.1875rem; // 35px
 $font-size-title-importance: 1.5rem; // 24px
 $font-size-header: 1.25rem; // 20px
 $font-size-card-important: 1.125rem; // 18px

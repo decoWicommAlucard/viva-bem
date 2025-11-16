@@ -1,0 +1,90 @@
+@use '../base/tokens' as tokens;
+@use '../base/utils' as utils;
+@use '../base/mixins' as mixins;
+
+.prevention {
+  width: 100%;
+  background: #fdefef;
+  padding-top: 51px;
+  padding-bottom: 69px;
+
+  &__container {
+    @include mixins.container-max(1117px);
+    @include utils.xflex($dir: column, $align: center, $gap: 54px);
+  }
+
+  &__title {
+    font-size: tokens.$font-size-h2;
+    text-align: center;
+    color: #d857aa;
+    font-weight: tokens.$font-bold;
+  }
+
+  &__cards {
+    width: 100%;
+
+    @include utils.xflex($wrap: wrap, $justify: center, $align: stretch);
+    column-gap: 42px;
+    row-gap: 67px;
+  }
+
+  &__card {
+    @include utils.flex-item(1, 1, min(100%, 300px));
+    max-width: min(100%, 250px);
+    @include utils.xflex($dir: column, $align: center, $gap: 1rem);
+    padding: 0 8px;
+    padding-top: 18px;
+
+    border-radius: tokens.$radius-xl;
+    border-radius: 20px;
+
+    background: #fffcfc;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
+    min-height: 400px;
+  }
+
+  &__image {
+    width: 88px;
+    height: 88px;
+    border-radius: tokens.$radius-full;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 12px 30px rgba(17, 115, 212, 0.15);
+  }
+
+  &__card-title {
+    font-size: tokens.$font-size-h3;
+    font-weight: tokens.$font-semibold;
+    color: tokens.$brand-dark;
+  }
+
+  &__list {
+    width: 100%;
+    text-align: left;
+    list-style: disc;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__list-item {
+    font-size: tokens.$font-size-p;
+    font-family: tokens.$font-roboto;
+    line-height: tokens.$lh-relaxed;
+    color: rgba(tokens.$brand-dark, 0.8);
+  }
+
+  @include mixins.mobile {
+    padding-inline: 24px;
+
+    &__title {
+      font-size: tokens.$font-size-title-prevent-mobile;
+    }
+
+    &__cards {
+      gap: 28px;
+    }
+  }
+}
