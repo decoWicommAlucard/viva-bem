@@ -9,9 +9,14 @@ html {
   font-size: 100%;
 } /* 16px */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 body {
-  background: tokens.$color-bg-app; /* ex: #fff */
-  color: tokens.$color-text-strong; /* títulos/texto principal */
   font-family: var(--font-main); /* Inter como fonte padrão */
   font-weight: tokens.$font-regular; /* 400 */
   line-height: tokens.$lh-normal; /* 1.4 */
@@ -23,7 +28,6 @@ body {
 p {
   font-size: tokens.$font-size-p; /* 16px */
   line-height: tokens.$lh-relaxed; /* 1.6 */
-  color: tokens.$color-text-muted; /* subtítulo/cor secundária */
 }
 
 /* Headings: tamanhos conforme tokens */
@@ -34,7 +38,6 @@ h4,
 h5 {
   font-family: var(--font-main); /* Inter */
   margin: 0; /* controlado via util/section */
-  color: tokens.$color-text-strong;
 }
 
 h1 {
@@ -78,6 +81,10 @@ select,
 textarea,
 button {
   font: inherit;
-  color: tokens.$color-text-strong;
 }
 
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}

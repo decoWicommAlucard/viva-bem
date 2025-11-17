@@ -1,0 +1,126 @@
+@use '../base/tokens' as tokens;
+@use '../base/utils' as utils;
+@use '../base/mixins' as mixins;
+
+.alerts {
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 0 81px;
+
+  &__container {
+    @include mixins.container-max(931px);
+    @include utils.xflex($dir: column, $align: center, $gap: 61px);
+  }
+
+  &__title {
+    font-size: clamp(2.25rem, 3vw, tokens.$font-size-h2);
+    font-weight: tokens.$font-bold;
+    text-align: center;
+
+    // gradiente azul → verde
+    background-image: tokens.$gradient-alerts-title;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__cards {
+    width: 100%;
+    @include utils.xflex($wrap: wrap, $justify: space-between, $align: stretch);
+    row-gap: 25px;
+  }
+
+  &__card {
+    max-width: 416px;
+    padding: 14px 24px 20px 24px;
+    border-radius: 24px;
+    @include utils.xflex($dir: column, $gap: 0.65rem, $align: flex-start);
+    box-shadow: 0 14px 34px rgba(17, 20, 45, 0.08);
+    text-align: left;
+  }
+
+  &__card-header {
+    @include utils.xflex($gap: 0.5rem, $align: center);
+    font-weight: tokens.$font-semibold;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  &__card-title {
+    font-size: tokens.$font-size-card-important;
+  }
+
+  &__card-text {
+    font-size: tokens.$font-size-p;
+    line-height: tokens.$lh-relaxed;
+    color: rgba(tokens.$brand-dark, 0.85);
+  }
+
+  &__card--pink {
+    background: #f9d6e7;
+
+    .alerts__card-title {
+      color: #ad346a;
+    }
+
+    .alerts__card-text {
+      color: #ad346a;
+    }
+  }
+
+  &__card--blue {
+    background: #d4e7fb;
+
+    .alerts__card-title {
+      color: #2769a3;
+    }
+
+    .alerts__card-text {
+      color: #2769a3;
+    }
+  }
+
+  &__card--green {
+    background: #d8f1df;
+
+    .alerts__card-title {
+      color: #244a2d;
+    }
+
+    .alerts__card-text {
+      color: #244a2d;
+    }
+  }
+
+  &__card--yellow {
+    background: #fde4bc;
+
+    .alerts__card-title {
+      color: #976c00;
+    }
+
+    .alerts__card-text {
+      color: #976c00;
+    }
+  }
+
+  @include mixins.mobile {
+    padding: 26px 18px;
+
+    &__container {
+      gap: 32px;
+    }
+
+    &__title {
+      font-size: tokens.$font-size-title-importance;
+    }
+    &__card {
+      max-width: 100%;
+    }
+  }
+}

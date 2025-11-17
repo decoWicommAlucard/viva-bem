@@ -1,0 +1,75 @@
+@use '../base/tokens' as tokens;
+@use '../base/utils' as utils;
+@use '../base/mixins' as mixins;
+
+.site-footer {
+  background: #282c5a;
+  color: tokens.$color-text-footer;
+  padding-top: 58px;
+
+  &__container {
+    @include mixins.container-max(1117px);
+    @include utils.xflex($justify: space-between, $align: flex-start, $wrap: wrap);
+    row-gap: 32px;
+    padding-bottom: 38px;
+  }
+
+  &__column {
+    max-width: 320px;
+    @include utils.xflex($dir: column, $align: flex-start, $gap: 12px);
+    font-size: tokens.$font-size-footer;
+    line-height: tokens.$lh-relaxed;
+  }
+
+  &__logo {
+    width: 140px;
+  }
+
+  &__quote {
+    font-weight: tokens.$font-semibold;
+    font-size: tokens.$font-size-footer;
+  }
+
+  &__title {
+    font-size: tokens.$font-size-footer;
+    font-weight: tokens.$font-semibold;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 20px;
+    font-size: tokens.$font-size-footer;
+  }
+
+  @include mixins.mobile {
+    padding: 32px 18px;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__logo {
+      max-width: 120px;
+    }
+  }
+}

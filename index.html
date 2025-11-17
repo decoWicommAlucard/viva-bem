@@ -1,15 +1,516 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sass básico</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Viva Bem</title>
+    <!-- Google Fonts (Inter e Roboto) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <h1>Olá, Sass!!! </h1>
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <figure class="site-header__logo">
+        <img
+          class="site-header__logo-image"
+          src="./src/img/logo-desktop.png"
+          alt="Viva Bem Logo"
+        />
+      </figure>
 
-    <p>Este HTML usa o CSS gerado a partir de <code>style.scss</code>.</p>
-    <button class="btn">Botão</button>
+      <nav class="site-header__nav" aria-label="Navegação principal">
+        <ul class="site-header__nav-list">
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#prevent-men"
+              >Prevenção Mas</a
+            >
+          </li>
+          <li class="site-header__nav-item">
+            <a class="site-header__nav-link" href="#prevent-women"
+              >Prevenção Fem</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ========== HERO ========== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 class="hero__title" id="hero-title">
+            Cuidar da saúde é um ato de amor
+          </h1>
+          <p class="hero__description">
+            Confira os principais exames de prevenção por faixa etária.
+          </p>
+          <div class="hero__actions">
+            <a class="hero__button hero__button--primary" href="#agenda">
+              Ver agenda por idade
+            </a>
+            <a class="hero__button hero__button--ghost" href="#about">
+              Saiba mais
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== IMPORTANCE SECTION ========== -->
+      <section class="importance" aria-labelledby="importance-title">
+        <div class="importance__container">
+          <div class="importance__header">
+            <h2 class="importance__title" id="importance-title">
+              A Importância dos Exames de Rotina
+            </h2>
+            <p class="importance__description">
+              Os exames preventivos são fundamentais para detectar doenças em estágios
+              iniciais, quando o tratamento é mais eficaz e menos invasivo. Manter uma
+              rotina de check-ups regulares pode salvar vidas e garantir uma melhor
+              qualidade de vida para você e sua família.
+            </p>
+          </div>
+
+          <div class="importance__cards" role="list">
+            <article class="importance__card" role="listitem">
+              <img
+                class="importance__icon"
+                src="./src/img/check.png"
+                alt="Ícone representando detecção precoce"
+                loading="lazy"
+              />
+              <h3 class="importance__card-title">Detecção Precoce</h3>
+              <p class="importance__card-text">
+                Identifique problemas antes que se tornem graves
+              </p>
+            </article>
+
+            <article class="importance__card" role="listitem">
+              <img
+                class="importance__icon"
+                src="./src/img/apoio-familiar.png"
+                alt="Ícone representando cuidado familiar"
+                loading="lazy"
+              />
+              <h3 class="importance__card-title">Cuidado Familiar</h3>
+              <p class="importance__card-text">
+                Proteja toda a família com exames regulares
+              </p>
+            </article>
+
+            <article class="importance__card" role="listitem">
+              <img
+                class="importance__icon"
+                src="./src/img/heart.png"
+                alt="Ícone representando qualidade de vida"
+                loading="lazy"
+              />
+              <h3 class="importance__card-title">Qualidade de Vida</h3>
+              <p class="importance__card-text">
+                Viva mais e melhor com prevenção adequada
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== FEMALE PREVENTION SECTION ========== -->
+      <section class="prevention" aria-labelledby="prevention-title">
+        <div class="prevention__container">
+          <h2 class="prevention__title" id="prevention-title">
+            Prevenção Feminina
+          </h2>
+
+          <div class="prevention__cards" role="list">
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-1-prevent.png"
+                alt="Jovem recebendo orientação médica"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 15 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Vacinação em dia (HPV, tétano, hepatite B, influenza e covid)
+                </li>
+                <li class="prevention__list-item">
+                  Consulta ginecológica inicial com orientações sobre saúde
+                  menstrual, contracepção e prevenção de ISTs
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-2-prevent.png"
+                alt="Profissional de saúde coletando sangue"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 20 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Exames de sangue e urina anuais (hemograma, glicose, colesterol,
+                  função renal e hepática)
+                </li>
+                <li class="prevention__list-item">
+                  Check-up odontológico e oftalmológico
+                </li>
+                <li class="prevention__list-item">
+                  Exame dermatológico para rastreamento de câncer de pele
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-3-prevent.png"
+                alt="Médica administrando vacina"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 25 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Papanicolau (preventivo) a cada 3 anos, se não houver alterações
+                </li>
+                <li class="prevention__list-item">
+                  Rastreamento do HPV se indicado
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-4-prevent.png"
+                alt="Profissional de saúde segurando estetoscópio"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 30 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Check-up anual com clínico geral
+                </li>
+                <li class="prevention__list-item">
+                  Exames de sangue mais completos e controle de colesterol
+                </li>
+                <li class="prevention__list-item">
+                  Aferição da pressão arterial e glicemia
+                </li>
+                <li class="prevention__list-item">
+                  Avaliação cardiovascular se houver histórico familiar ou fatores
+                  de risco
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-5-prevent.png"
+                alt="Médica sorrindo com prancheta"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 40 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Mamografia anual ou bianual (dependendo do histórico familiar)
+                </li>
+                <li class="prevention__list-item">
+                  Exames cardiovasculares mais detalhados (eletrocardiograma, teste
+                  ergométrico e ecocardiograma, se indicado)
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-6-prevent.png"
+                alt="Mulher fazendo acompanhamento médico"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 50 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Colonoscopia a cada 5 anos, ou antes se houver risco elevado
+                </li>
+                <li class="prevention__list-item">
+                  Continuidade dos exames laboratoriais e ginecológicos
+                </li>
+                <li class="prevention__list-item">
+                  Monitoramento para osteoporose (densitometria óssea pode ser
+                  indicada)
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== MALE PREVENTION SECTION ========== -->
+      <section
+        class="prevention prevention--male"
+        aria-labelledby="prevention-male-title"
+      >
+        <div class="prevention__container">
+          <h2 class="prevention__title" id="prevention-male-title">
+            Prevenção Masculina
+          </h2>
+
+          <div class="prevention__cards" role="list">
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-1-prevent-men.png"
+                alt="Jovem realizando autoexame testicular"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 15 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Autoexame testicular mensal (após o banho)
+                </li>
+                <li class="prevention__list-item">
+                  Atenção a alterações: tamanho, dor e nódulos
+                </li>
+                <li class="prevention__list-item">
+                  Vacinação em dia (hepatite B, tétano, HPV, influenza, covid)
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-2-prevent-men.png"
+                alt="Profissional coletando exame de sangue"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 20 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Exames de sangue e urina anuais
+                </li>
+                <li class="prevention__list-item">
+                  Avaliação odontológica e oftalmológica
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-3-prevent-men.png"
+                alt="Homem em consulta de check-up"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 30 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Check-up anual com clínico geral
+                </li>
+                <li class="prevention__list-item">
+                  Exames de sangue mais completos
+                </li>
+                <li class="prevention__list-item">
+                  Aferição da pressão arterial e glicemia de jejum
+                </li>
+                <li class="prevention__list-item">
+                  Avaliação dermatológica
+                </li>
+                <li class="prevention__list-item">
+                  Avaliação cardiovascular inicial
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-4-prevent-men.png"
+                alt="Médico avaliando exames laboratoriais"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 40 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">Exames cardiovasculares</li>
+                <li class="prevention__list-item">
+                  Exames de sangue e urina anuais contínuos
+                </li>
+                <li class="prevention__list-item">
+                  Histórico familiar de câncer de cólon ou próstata? Antecipar
+                  rastreamento
+                </li>
+              </ul>
+            </article>
+
+            <article class="prevention__card" role="listitem">
+              <img
+                class="prevention__image"
+                src="./src/img/image-card-5-prevent-men.png"
+                alt="Paciente conversando com médico maduro"
+                loading="lazy"
+              />
+              <h3 class="prevention__card-title">A partir dos 50 anos</h3>
+              <ul class="prevention__list">
+                <li class="prevention__list-item">
+                  Colonoscopia (a cada 5 anos)
+                </li>
+                <li class="prevention__list-item">
+                  Exame de próstata (PSA + toque retal)
+                </li>
+                <li class="prevention__list-item">
+                  Continuidade dos exames laboratoriais e cardiovasculares
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== ALERTS SECTION ========== -->
+      <section class="alerts" aria-labelledby="alerts-title">
+        <div class="alerts__container">
+          <h2 class="alerts__title" id="alerts-title">Alertas Importantes</h2>
+
+          <div class="alerts__cards" role="list">
+            <article class="alerts__card alerts__card--pink" role="listitem">
+              <div class="alerts__card-header">
+                <img
+                  class="alerts__icon"
+                  src="./src/img/icon-heart.svg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+                <h3 class="alerts__card-title">Autoexame das Mamas</h3>
+              </div>
+              <p class="alerts__card-text">
+                Realize o autoexame das mamas todo mês, entre o 7º e 10º dia após o
+                início da menstruação. Para mulheres na menopausa, escolha um dia
+                fixo.
+              </p>
+            </article>
+
+            <article class="alerts__card alerts__card--blue" role="listitem">
+              <div class="alerts__card-header">
+                <img
+                  class="alerts__icon"
+                  src="./src/img/icon-shield.svg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+                <h3 class="alerts__card-title">Autoexame dos Testículos</h3>
+              </div>
+              <p class="alerts__card-text">
+                Homens e pessoas com testículos devem realizar o autoexame
+                mensalmente, após o banho, para identificar alterações como nódulos
+                ou inchaços.
+              </p>
+            </article>
+
+            <article class="alerts__card alerts__card--green" role="listitem">
+              <div class="alerts__card-header">
+                <img
+                  class="alerts__icon"
+                  src="./src/img/icon-vaccine.svg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+                <h3 class="alerts__card-title">Vacinas em Dia</h3>
+              </div>
+              <p class="alerts__card-text">
+                Todos devem manter a carteira de vacinação atualizada. Algumas
+                vacinas precisam de reforço na idade adulta, como tétano, difteria e
+                hepatite B.
+              </p>
+            </article>
+
+            <article class="alerts__card alerts__card--yellow" role="listitem">
+              <div class="alerts__card-header">
+                <img
+                  class="alerts__icon"
+                  src="./src/img/icon-mental.svg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+                <h3 class="alerts__card-title">Saúde Mental</h3>
+              </div>
+              <p class="alerts__card-text">
+                Cuidar da mente é tão importante quanto do corpo. Reserve momentos
+                para relaxar, dormir bem e buscar apoio se sentir necessidade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__container">
+        <div class="site-footer__column">
+          <img
+            class="site-footer__logo"
+            src="./src/img/logo-footer-desktop.png"
+            alt="Logo Viva Bem"
+          />
+          <p class="site-footer__quote">"Prevenção é cuidado com você"</p>
+          <p class="site-footer__text">
+            Conectando pessoas através da sustentabilidade e tecnologia.
+          </p>
+        </div>
+
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Links Úteis</h3>
+          <ul class="site-footer__list">
+            <li>
+              <a href="https://www.gov.br/saude/" target="_blank" rel="noreferrer"
+                >Ministério da Saúde</a
+              >
+            </li>
+            <li>
+              <a href="https://www.inca.gov.br/" target="_blank" rel="noreferrer"
+                >INCA - Instituto Nacional do Câncer</a
+              >
+            </li>
+            <li>
+              <a href="https://www.gov.br/saude/pt-br/assuntos/setor-saude/sus"
+                target="_blank"
+                rel="noreferrer"
+                >SUS - Sistema Único de Saúde</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="site-footer__column">
+          <h3 class="site-footer__title">Contato e Apoio</h3>
+          <ul class="site-footer__list">
+            <li>Disque Saúde: 136</li>
+            <li>sac@saude.gov.br</li>
+            <li>
+              Em caso de emergência, procure imediatamente uma unidade de saúde ou
+              ligue para o SAMU: 192
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        © 2025 Agenda de Saúde Preventiva. Informações baseadas em diretrizes
+        médicas nacionais e internacionais.
+      </div>
+    </footer>
   </body>
 </html>

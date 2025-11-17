@@ -1,15 +1,38 @@
 @use 'sass:color';
 
-
-$brand-dark: #04031C;
+$brand-dark: #04031c;
 
 // Aliases semânticos
 $color-primary: $brand-dark; // cor primária
-$gradient: linear-gradient(90deg, #4247A2 0%, #52B095 100%);
-$color-text-header: #FFFFFF; // cor do texto no header
+$color-secondary: #1173d4; // cor secundária
+$gradient: linear-gradient(90deg, #4247a2 0%, #52b095 100%);
+$gradient-button: linear-gradient(0deg, #1173d4 0%, #1173d4 100%),
+  linear-gradient(90deg, rgba(17, 115, 212, 0) 100%, #1173d4 0%);
+
+$gradient-title: linear-gradient(90deg, #33cc73 0%, #1173d4 100%);
+$gradient-pink: linear-gradient(
+  90deg,
+  #f9016f8a 54%,
+  #9308859e 61.96%,
+  #d038aac0 75.48%,
+  #851c87 100%
+);
+$gradient-blue: linear-gradient(
+  90deg,
+  #3373d2 0%,
+  #6f95c7 25%,
+  #7bb5f5 50%,
+  #0074ee 75%,
+  #5ea7ef 100%
+);
+$gradient-alerts-title: linear-gradient(90deg, #1173d4 0%, #33cc73 100%);
+
+$color-text-header: #ffffff; // cor do texto no header
+$color-text-footer: #ffffff; // cor do texto no footer
 
 // -------------------- TIPOGRAFIA --------------------
 $font-inter: 'Inter', sans-serif; // família para h3, h4, h5
+$font-roboto: 'Roboto', sans-serif; // família para h1, h2, p, span
 
 // Tamanhos (px → rem; base 16px)
 $font-size-p: 0.875rem; // 14px
@@ -17,9 +40,12 @@ $font-size-h1: 1.5625rem; // 25px
 $font-size-h2: 2.8125rem; // 45px
 $font-size-h3: 1.25rem; // 20px
 
+$font-size-title-prevent-mobile: 2.1875rem; // 35px
+$font-size-title-importance: 1.5rem; // 24px
 $font-size-header: 1.25rem; // 20px
 $font-size-card-important: 1.125rem; // 18px
 $font-size-footer: 1.125rem; // 18px
+$font-size-paragraph-hero: 0.875rem; // 14px
 $font-size-card-prevent: 0.875rem; // 14px
 
 // Pesos
@@ -37,15 +63,14 @@ $lh-relaxed: 1.6; // confortável
 $container-max: 1120px; // largura máxima do container
 
 // -------------------- RAIOS & SOMBRAS --------------------
-$radius-sm: 0.375rem; // 6px
-$radius-md: 0.5rem; // 8px
-$radius-base: 0.625rem; // 10px
-$radius-lg: 0.75rem; // 12px
-$radius-xl: 1rem; // 16px
-$radius-xxl: 1.25rem; // 20px
-$radius-header: 3.125rem; // 50px
+$radius-sm: 6px; // 6px
+$radius-md: 8px; // 8px
+$radius-base: 10px; // 10px
+$radius-lg: 12px; // 12px
+$radius-xl: 16px; // 16px
+$radius-xxl: 20px; // 20px
+$radius-header: 50px; // 50px
 $radius-full: 99999rem;
 
 // -------------------- COMPONENTES (aliases prontos) --------------------
 $btn-height: 2.75rem; // 44px
-

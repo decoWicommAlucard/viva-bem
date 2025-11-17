@@ -1,0 +1,86 @@
+@use '../base/tokens' as tokens;
+@use '../base/utils' as utils;
+@use '../base/mixins' as mixins;
+
+.site-header {
+  @include utils.xflex(between-center, $gap: 2rem);
+  width: min(100%, 1117px);
+  margin: 0 auto;
+  min-height: 57px;
+  transform: translate(0%, 63px); // MUHAHAHAHAHAHAHHAHAHAHHAHAHAHAHAHHAHAHA
+
+  padding-left: 11px;
+  padding-right: 28px;
+  color: tokens.$color-text-header;
+  background: tokens.$gradient;
+  border-radius: tokens.$radius-header;
+
+  &__logo {
+    @include utils.xflex($gap: 0.75rem);
+  }
+
+  &__logo-image {
+    min-height: 45px;
+  }
+
+  &__nav-list {
+    @include utils.xflex($gap: 1.5rem);
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: tokens.$font-size-header;
+    font-weight: tokens.$font-regular;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.05em;
+    color: inherit;
+    transition: opacity 0.2s ease;
+
+    &:focus-visible,
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  @include mixins.mobile {
+    margin: 0 16px;
+    margin-top: 18px;
+    min-height: 48px;
+
+    width: auto;
+    transform: none;
+    @include utils.xflex(between-center, $gap: 18px, $wrap: wrap);
+
+    &__logo-image {
+      max-width: 87px;
+      min-height: 21px;
+    }
+
+    &__nav-list {
+      @include utils.xflex($gap: 18px, $wrap: wrap, $justify: center);
+    }
+
+    &__nav-link {
+      font-size: tokens.$font-size-p;
+    }
+
+    @media (max-width: 425px) {
+      top: 28px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      gap: 12px;
+      justify-content: center;
+
+      &__nav-list {
+        gap: 12px;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 57px;
+    &__nav-list {
+      margin-right: 212px;
+    }
+  }
+}
