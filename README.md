@@ -25,6 +25,8 @@ O **Viva Bem** é uma plataforma educativa que visa conscientizar sobre a import
 viva-bem/
 ├── index.html                 # Página principal
 ├── package.json              # Dependências e scripts
+├── vercel.json               # Configuração do Vercel para deploy
+├── README.md                 # Documentação do projeto
 ├── src/
 │   ├── css/                  # CSS compilado (gerado automaticamente)
 │   │   └── styles.css
@@ -96,6 +98,24 @@ npm run build
 
 - `npm run sass:watch` - Compila SCSS em modo watch (desenvolvimento)
 - `npm run serve` - Inicia apenas o servidor Browser Sync
+
+## 🚀 Deploy
+
+### Vercel
+
+O projeto está configurado para deploy no Vercel através do arquivo `vercel.json`. Para fazer o deploy:
+
+1. Certifique-se de que o CSS está compilado (execute `npm run build`)
+2. Faça push do código para o repositório Git
+3. Conecte o repositório ao Vercel
+4. O Vercel detectará automaticamente a configuração e fará o deploy
+
+O arquivo `vercel.json` configura:
+- Comando de build: `npm run build`
+- Diretório de saída: raiz do projeto (`.`)
+- Instalação de dependências: `npm install`
+
+**Nota**: Certifique-se de que o arquivo `src/css/styles.css` existe antes do deploy, pois ele é gerado pelo comando de build.
 
 ## 🎨 Sistema de Design
 
